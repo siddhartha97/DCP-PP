@@ -70,3 +70,4 @@ fill something
 ```
 
 ### Table Schema: 
+![img](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/preprocess_1.png)
