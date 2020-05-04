@@ -39,4 +39,23 @@ class​ ​StdOutListener​(StreamListener)​:
 * Each Json was stored as a class and written into a file as JSONL format
 
 ### Code Snippet: [link](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/Pipeline/java/dataflow/src/main/java/edu/usfca/dataflow/Main.java)
-![img](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/preprocess_1.png)
+```
+ static public void processJson(String filename) throws FileNotFoundException, IOException {
+    Gson gson = new GsonBuilder().setLenient().create();
+    JsonObject object = (JsonObject) new JsonParser().parse(new FileReader(filename));
+    String user_id = "", user_name = "", user_screen_name = "", user_location = "", user_url = "";
+    String country_code = ""; String country_name = "";
+
+    if(object.has("retweeted_status")) {
+       JsonObject re_status = object.get("retweeted_status").getAsJsonObject();
+      if(re_status.has("user")) {
+        JsonObject user_json = re_status.get("user").getAsJsonObject();
+        if(user_json.has("id_str"))
+          user_id = user_json.get("id_str").getAsString();
+        if(user_json.has("name"))
+          user_name = user_json.get("name").getAsString();
+        if(user_json.has("screen_name"))
+          user_screen_name = user_json.get("screen_name").getAsString();
+      }
+   }
+```
