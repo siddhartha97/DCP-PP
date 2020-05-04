@@ -84,3 +84,5 @@ Add data
 ![img456](Images/avg_following.png)
 ### Average User Follower
 ![img169](Images/avg_followers.png)
+### Most Followed User Yearly
+![img65](Images/most_followers.png)
