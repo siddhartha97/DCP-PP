@@ -59,3 +59,14 @@ class​ ​StdOutListener​(StreamListener)​:
       }
    }
 ```
+### Google Big-Query: 
+* Current File Format: JSONL
+* Since the size of the file was > 10Mb, we cannot directly upload the JSONL File.
+* File was loaded to Google Cloud Storage and then written to Google Big Query 
+
+### Code Snippet:
+```
+fill something
+```
+
+### Table Schema: 
