@@ -12,23 +12,23 @@ Billions of users use the social network, which means billions of data is availa
 
 ### Code Snippet: 
 ```
-**import​ time**
-**import​ twitter_credential**
-**from​ tweepy ​import​ Stream**
-**from​ tweepy ​import​ OAuthHandler**
-**from​ tweepy.streaming ​import​ StreamListener**
+import​ time
+import​ twitter_credential
+from​ tweepy ​import​ Stream
+from​ tweepy ​import​ OAuthHandler
+from​ tweepy.streaming ​import​ StreamListener
 
-class​ **​StdOutListener​(StreamListener)​**:
-  **global​** ct
+class​ ​StdOutListener​(StreamListener)​:
+  global​ ct
   ct = ​0
-  **def​** ​on_data​(self, data)​: 
+  def​ ​on_data​(self, data)​: 
     ts = time.time()
-    **global​** ct
+    global​ ct
     ct=ct + ​1
     print(​"Fetching Tweet #:"​, ct)
     with​ open(​"Files/"​ + ​"tweet_"​ + str(ts) + ​".json"​, "​ w"​) ​as​ tf:
                       tf.write(data)
     return​ ​True
-  **def​**​on_error​(self, status)​:
+  def​ ​on_error​(self, status)​:
     print(status)
 ```
