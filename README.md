@@ -10,7 +10,8 @@ Billions of users use the social network, which means billions of data is availa
 * Wrote a Python script to parse tweets
 * Around 30k-100k tweets were extracted per day
 
-### Code Snippet: 
+### Code Snippet: [link](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/Scripts/parse_tweet.py)
+
 ```
 import​ time
 import​ twitter_credential
@@ -32,3 +33,8 @@ class​ ​StdOutListener​(StreamListener)​:
   def​ ​on_error​(self, status)​:
     print(status)
 ```
+### Preprocessing
+* Used GSON Parser to parse the Json object and extract important key-values such as *(user_name: “Something”, user_screen_name : “loremipsum”, user_location:
+“loremipsum1”)*
+* Each Json was stored as a class and written into a file as JSONL format
+
