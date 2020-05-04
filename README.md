@@ -40,8 +40,7 @@ class​ ​StdOutListener​(StreamListener)​:
 
 ### Code Snippet: [link](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/Pipeline/java/dataflow/src/main/java/edu/usfca/dataflow/Main.java)
 
-<img src="https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/preprocess_1.png" alt="img1" class="inline"/>
-
+![test_img](preprocess_1.png)
 ### Google Big-Query: 
 * Current File Format: JSONL
 * Since the size of the file was > 10Mb, we cannot directly upload the JSONL File.
