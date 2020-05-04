@@ -1,4 +1,4 @@
-## Twitter Data Analysis
+## Motivation
 
 Billions of users use the social network, which means billions of data is available on the internet. Twitter being one of the social network giants is one of the famous platforms for people to rant, provide insights on unnecessary topics, bash each other, talk about politics, and many more. Primary motivation for choosing the twitter dataset is to analyse the dynamics and structure of the modern society. Almost every active twitter user’s thinking about a certain topic can be altered via fake news. My analysis of the dataset is to find patterns within countries.
 
@@ -68,8 +68,15 @@ Add data
 5. Provide most popular apps and mention that the result was inconclusive. 
 6. Find average user following country wise and provide the udf code snippet.
 ```
-
+#### Schema of Table
+![img123](Images/schema.png)
+#### Data Snippet
+![img143](Images/data-snippet.png)
 #### Initial Distribution of Users Yearly
-![img2](Images/img1.png)
+![img24](Images/img1.png)
 #### Initial Distribution of Users Country Wise
-![img2](Images/img2.png)
+![img25](Images/img2.png)
+#### Invalid Users 
+![img42](Images/yearly_spam_users.png)
+### Pair-wise Relationship of invalid users
+![img35](Images/pair_wise_invalid_users.png)
