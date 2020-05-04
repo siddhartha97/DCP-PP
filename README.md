@@ -80,3 +80,7 @@ Add data
 ![img42](Images/yearly_spam_users.png)
 ### Pair-wise Relationship of invalid users
 ![img35](Images/pair_wise_invalid_users.png)
+### Average User Following 
+![img456](Images/avg_following.png)
+### Average User Follower
+![img169](Images/avg_followers.png)
