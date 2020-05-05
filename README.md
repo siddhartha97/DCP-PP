@@ -82,9 +82,15 @@ Add data
 ![img456](Images/story-board3.png)
 ![img123](Images/sb4.png)
 * It's important to note that the UDF Function is using an extra step called `Aggregation` and also the `Sort` step doesn't seem any faster
-* Looks like the original simple query is more efficient! 
+* Looks like the *Normal Query* is more efficient! 
+* Queries: 
+![img651](Images/sc1.png)
+![img652](Images/sc2.png)
+
 ### Most Followed User Yearly
 ![img65](Images/most_followers.png)
+
+
 
 ```
 code snippet for average followers country wise and compare the efficiency for udf and normal
