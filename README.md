@@ -55,7 +55,7 @@ gs util cp *.jsonl gs://my-bucket
 ![img123](Images/schema.png)
 #### Data Snippet
 ![img143](Images/data-snippet.png)
-#### Story-Board
+### Story-Board:
 ```
 * Welcome to a day in the life of a new grad Data Scientist Sid! 
 * Enjoy the conversation between him, his manager and a PM! 
