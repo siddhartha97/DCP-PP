@@ -79,8 +79,7 @@ gs util cp *.jsonl gs://my-bucket
 ### Future Work: 
 * The last result where I was finding the most popular Twitter user in a given year was inconclusive - partly because I had less twitter user data for a couple of years.
 * The database contains a lot of texts which a given user tweets. We can use those texts for text processing and sentiment analysis of users. 
-* Before extracting the important key:value pairs from the raw json tweets, we can run feature selection analysis on raw tweets to find which columns/keys in this case are important. [Link](https://www.kaggle.com/kanncaa1/feature-selection-and-data-visualization)
-
+* Before extracting the important key:value pairs from the raw json tweets, we can run feature selection analysis on raw tweets to find which columns/keys in this case are important. 
 ### Useful References: 
 [Big-Query-Cost-Explanation](https://cloud.google.com/bigquery/query-plan-explanation?hl=en_GB)
 <br>
@@ -88,5 +87,6 @@ gs util cp *.jsonl gs://my-bucket
 <br>
 [Big-Query-Analytic-Functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/analytic-function-concepts)
 <br>
+[Feature-Selection](https://www.kaggle.com/kanncaa1/feature-selection-and-data-visualization)
 
 
