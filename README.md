@@ -80,7 +80,9 @@ Add data
 ![img123](Images/story-board1.png)
 ![img213](Images/story-board-2.png)
 ![img456](Images/story-board3.png)
-![img444](Images/sb4.png)
+![img123](Images/sb4.png)
+* It's important to note that the UDF Function is using an extra step called `Aggregation` and also the `Sort` step doesn't seem any faster
+* Looks like the original simple query is more efficient! 
 ### Most Followed User Yearly
 ![img65](Images/most_followers.png)
 
