@@ -73,7 +73,10 @@ Add data
 ![img123](Images/schema.png)
 #### Data Snippet
 ![img143](Images/data-snippet.png)
-
+#### Story-Board
+* Welcome to a day in the life of a new grad Data Scientist Sid who has no clue what he is doing! 
+* Enjoy the conversation between him and his manager! 
+* This is his first job straight outta college! 
 ![img123](Images/story-board1.png)
 #### Invalid Users 
 ![img42](Images/yearly_spam_users.png)
