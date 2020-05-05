@@ -74,16 +74,7 @@ Add data
 #### Data Snippet
 ![img143](Images/data-snippet.png)
 
-
-#### Story-boarding
-* The first question we might ask ourselves is what is the distribution of users per year?
-![img24](Images/img1.png)
-* Hah! Looks like a lot users in 2009, 2010 and 2011...
-* Hmm let's take a closer look at that distribution now country wise
-![img25](Images/img2.png)
-* Woah, users mostly seem to be from the US!
-But wait...we haven't checked for duplicates in our data. 
-* How do we do it? INNER-JOIN our tables? Nah too expensive. UDF Functions? Umm maybe.. 
+![img123](Images/story-board1.png)
 #### Invalid Users 
 ![img42](Images/yearly_spam_users.png)
 ### Pair-wise Relationship of invalid users
