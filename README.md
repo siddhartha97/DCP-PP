@@ -43,7 +43,7 @@ class​ ​StdOutListener​(StreamListener)​:
 
 ![test_img](Images/preprocess.png)
 ### Google Big-Query: 
-* Current File Format: JSONL
+* Current File Format: JSONL.
 * Since the size of the file was > 10MB, we cannot directly upload the JSONL File.
 * File was loaded to Google Cloud Storage and then written to Google Big Query. 
 
