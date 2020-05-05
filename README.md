@@ -81,12 +81,13 @@ gs util cp *.jsonl gs://my-bucket
 * The database contains a lot of texts which a given user tweets. We can use those texts for text processing and sentiment analysis of users. 
 * Before extracting the important key:value pairs from the raw json tweets, we can run feature selection analysis on raw tweets to find which columns/keys in this case are important. 
 ### Useful References: 
-[Big-Query-Cost-Explanation](https://cloud.google.com/bigquery/query-plan-explanation?hl=en_GB)
+[Feature-Selection](https://www.kaggle.com/kanncaa1/feature-selection-and-data-visualization)
 <br>
 [Big-Query-Best-Practices](https://cloud.google.com/blog/products/data-analytics/cost-optimization-best-practices-for-bigquery)
 <br>
+[Big-Query-Cost-Explanation](https://cloud.google.com/bigquery/query-plan-explanation?hl=en_GB)
+<br>
 [Big-Query-Analytic-Functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/analytic-function-concepts)
 <br>
-[Feature-Selection](https://www.kaggle.com/kanncaa1/feature-selection-and-data-visualization)
 
 
