@@ -80,10 +80,7 @@ Add data
 ![img123](Images/story-board1.png)
 ![img213](Images/story-board-2.png)
 ![img456](Images/story-board3.png)
-### Average Followers
-![img61](Images/aa1.png)
-### Average Following
-![img62](Images/aa2.png)
+![img444](Images/story-board4.png)
 ### Most Followed User Yearly
 ![img65](Images/most_followers.png)
 
