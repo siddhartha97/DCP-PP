@@ -84,7 +84,9 @@ Add data
 * It's important to note that the UDF Function is using an extra step called `Aggregation` and also the `Sort` step doesn't seem any faster
 * Looks like the *Normal Query* is more efficient! 
 * Queries: 
+##### Simple Query:
 ![img651](Images/sc1.png)
+##### JS UDF Query: 
 ![img652](Images/sc2.png)
 
 ### Most Followed User Yearly
