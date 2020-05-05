@@ -1,11 +1,11 @@
 ## Motivation
 
-Billions of users use the social network, which means billions of data is available on the internet. Twitter being one of the social network giants is one of the famous platforms for people to rant, provide insights on unnecessary topics, bash each other, talk about politics, and many more. Primary motivation for choosing the twitter dataset is to analyse the dynamics and structure of the modern society. Almost every active twitter user’s thinking about a certain topic can be altered via fake news. My analysis of the dataset is to find patterns within countries.
+Billions of users use the social network, which means billions of data is available on the internet. Twitter being one of the social network giants is one of the famous platforms for people to rant, provide insights on unnecessary topics, bash each other, talk about politics, and many more. Primary motivation for choosing the twitter dataset is to analyse the dynamics and structure of the modern society. Almost every active twitter user’s thinking about a certain topic can be altered via fake news. My analysis of the dataset is to find patterns within countries and users.
 
 ![img09](Images/hld.png)
 ### About the data
 * The tweets were extracted via [Twitter API](https://developer.twitter.com/en/docs) and [Tweepy](https://www.tweepy.org/)
-* Data Format : JSONL
+* Data Format : JSONL.
 
 ### Obtaining the data
 * Wrote a Python script to parse tweets.
@@ -44,7 +44,7 @@ class​ ​StdOutListener​(StreamListener)​:
 ![test_img](Images/preprocess.png)
 ### Google Big-Query: 
 * Current File Format: JSONL
-* Since the size of the file was > 10Mb, we cannot directly upload the JSONL File.
+* Since the size of the file was > 10MB, we cannot directly upload the JSONL File.
 * File was loaded to Google Cloud Storage and then written to Google Big Query. 
 
 #### Command-Line Argument: 
@@ -56,14 +56,16 @@ gs util cp *.jsonl gs://my-bucket
 #### Data Snippet
 ![img143](Images/data-snippet.png)
 #### Story-Board
-* Welcome to a day in the life of a new grad Data Scientist Sid who has no clue what he is doing! 
-* Enjoy the conversation between him and his manager! 
-* This is his first job straight outta college! 
+```
+* Welcome to a day in the life of a new grad Data Scientist Sid! 
+* Enjoy the conversation between him, his manager and a PM! 
+* This is his first job straight out of college! 
+```
 ![img123](Images/story-board1.png)
 ![img213](Images/story-board-2.png)
 ![img456](Images/story-board3.png)
 ![img123](Images/sb4.png)
-* It's important to note that the UDF Function is using an extra step called `Aggregation` and also the `Sort` step doesn't seem any faster
+* It's important to note that the UDF Function is using an extra step called `Aggregation` and also the `Sort` step doesn't seem any faster.
 * Looks like the *Normal Query* is more efficient! 
 * Queries: 
 ##### Simple Query:
@@ -71,5 +73,20 @@ gs util cp *.jsonl gs://my-bucket
 ##### JS UDF Query: 
 ![img652](Images/sc2.png)
 ![img612](Images/sb5.png)
-* Sid is supposed to show this result during his presentation when he realizes that his results are *inconclusive*. How can Barack Obama lose so many followers between 2007 to 2008! Hmm, so it means we have less data for a couple of years! What does Sid do? Stay tuned!
+* Sid is supposed to show this result during his presentation when he realizes that his results are *inconclusive*. How can Barack Obama lose so many followers between 2007 to 2008! Hmm, so it means we have less data for a couple of years! What does Sid do? He tries to address these things in his future work.
+
+
+### Future Work: 
+* The last result where I was finding the most popular Twitter user in a given year was inconclusive - partly because I had less twitter user data for a couple of years.
+* The database contains a lot of texts which a given user tweets. We can use those texts for text processing and sentiment analysis of users. 
+* Before extracting the important key:value pairs from the raw json tweets, we can run feature selection analysis on raw tweets to find which columns/keys in this case are important. [Link](https://www.kaggle.com/kanncaa1/feature-selection-and-data-visualization)
+
+### Useful References: 
+[Big-Query-Cost-Explanation](https://cloud.google.com/bigquery/query-plan-explanation?hl=en_GB)
+<br>
+[Big-Query-Best-Practices](https://cloud.google.com/blog/products/data-analytics/cost-optimization-best-practices-for-bigquery)
+<br>
+[Big-Query-Analytic-Functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/analytic-function-concepts)
+<br>
+
 
