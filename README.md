@@ -79,10 +79,7 @@ Add data
 * This is his first job straight outta college! 
 ![img123](Images/story-board1.png)
 ![img213](Images/story-board-2.png)
-#### Invalid Users 
-![img42](Images/yearly_spam_users.png)
-### Pair-wise Relationship of invalid users
-![img35](Images/pair_wise_invalid_users.png)
+![img456](Images/story-board3.png)
 ### Average Followers
 ![img61](Images/aa1.png)
 ### Average Following
