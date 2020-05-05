@@ -34,12 +34,12 @@ class​ ​StdOutListener​(StreamListener)​:
   def​ ​on_error​(self, status)​:
     print(status)
 ```
-### Preprocessing
+### Pre-processing
 * Used GSON Parser to parse the Json object and extract important key-values such as *(user_name: “Something”, user_screen_name : “loremipsum”, user_location:
 “loremipsum1”)*
 * Each Json was stored as a class and written into a file as JSONL format.
 
-#### Code Snippet:[link](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/Pipeline/java/dataflow/src/main/java/edu/usfca/dataflow/Main.java)
+#### Code Snippet: [link](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/Pipeline/java/dataflow/src/main/java/edu/usfca/dataflow/Main.java)
 
 ![test_img](Images/preprocess.png)
 ### Google Big-Query: 
@@ -50,24 +50,6 @@ class​ ​StdOutListener​(StreamListener)​:
 #### Command-Line Argument: 
 ```
 gs util cp *.jsonl gs://my-bucket 
-```
-
-### Table Schema: 
-```
-Add images
-```
-### Data Snippet: 
-```
-Add data
-```
-### Shape of the data: 
-```
-1. Add distribution of data
-2. Add distribution country wise
-3. Remove any duplicates using Analytic Function (provide snippet)
-4. Provide invalid user chart and pairwise relationship
-5. Provide most popular apps and mention that the result was inconclusive. 
-6. Find average user following country wise and provide the udf code snippet.
 ```
 #### Schema of Table
 ![img123](Images/schema.png)
@@ -88,12 +70,6 @@ Add data
 ![img651](Images/sc1.png)
 ##### JS UDF Query: 
 ![img652](Images/sc2.png)
+![img612](Images/sb5.png)
+* Sid is supposed to show this result during his presentation when he realizes that his results are *inconclusive*. How can Barack Obama lose so many followers between 2007 to 2008! Hmm, so it means we have less data for a couple of years! What does Sid do? Stay tuned!
 
-### Most Followed User Yearly
-![img65](Images/most_followers.png)
-
-
-
-```
-code snippet for average followers country wise and compare the efficiency for udf and normal
-```
