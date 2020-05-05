@@ -86,6 +86,7 @@ Add data
 ![img62](Images/aa2.png)
 ### Most Followed User Yearly
 ![img65](Images/most_followers.png)
-### Most Followed User Yearly
-![img65](Images/most_followers.png)
 
+```
+code snippet for average followers country wise and compare the efficiency for udf and normal
+```
