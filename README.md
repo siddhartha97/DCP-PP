@@ -97,7 +97,7 @@ gs util cp *.jsonl gs://my-bucket
 * Looks like the *Normal Query* is more efficient! 
 * Queries: 
 ##### Simple Query:
-```
+```mysql
 SELECT
   country_code,
   u_followers/u_id AS avg_followers,
