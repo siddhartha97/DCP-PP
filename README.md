@@ -65,7 +65,7 @@ gs util cp *.jsonl gs://my-bucket
 ```
 ![img123](Images/story-board1.png)
 ![img213](Images/story-board-2.png)
-![img456](Images/story-board3.png)
+<iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/9Hcr66RyuRMrQWgbwMpWcc#2Ux7TurymNDXVqGDQFL5"></iframe>
 
 <iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/7mTNcYUmovVrSTqX2GBg8q#2Ux7TurymNBUosUW4x3j"></iframe>
 
