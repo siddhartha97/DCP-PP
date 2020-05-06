@@ -11,6 +11,8 @@ Billions of users use the social network, which means billions of data is availa
 * Wrote a Python script to parse tweets.
 * Around 30k-100k tweets were extracted per day.
 
+<iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/MH6Cbanx3pnopev7VZigWg#2Ux7TurymMoqmkXT1cLP"></iframe>
+
 #### Code Snippet: [link](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/Scripts/parse_tweet.py)
 
 ```
