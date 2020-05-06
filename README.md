@@ -97,7 +97,7 @@ gs util cp *.jsonl gs://my-bucket
 * Looks like the *Normal Query* is more efficient! 
 * Queries: 
 ##### Simple Query:
-```mysql
+```sql
 SELECT
   country_code,
   u_followers/u_id AS avg_followers,
@@ -116,7 +116,7 @@ FROM (
     country_code)
 ```
 ##### JS UDF Query: 
-```
+```sql
 CREATE TEMP FUNCTION
   solve(param ARRAY<STRUCT<user_followers INT64,
     user_following INT64>>)
