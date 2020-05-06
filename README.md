@@ -14,7 +14,7 @@ The data was gathered by writing a Python script which uses [Twitter API](https:
 
 #### Code Snippet: [link](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/Scripts/parse_tweet.py)
 
-```
+```python
 import​ time
 import​ twitter_credential
 from​ tweepy ​import​ Stream
@@ -41,7 +41,7 @@ class​ ​StdOutListener​(StreamListener)​:
 * Each Json was stored as a class and written into a file as JSONL format.
 
 #### Code Snippet: [link](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/Pipeline/java/dataflow/src/main/java/edu/usfca/dataflow/Main.java)
-```
+```java
  static public void processJson(String filename) {
    Gson gson = new GsonBuilder().setLenient().create();
    JsonObject object = (JsonObject) new JsonParser()
