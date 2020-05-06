@@ -54,7 +54,7 @@ class​ ​StdOutListener​(StreamListener)​:
 gs util cp *.jsonl gs://my-bucket 
 ```
 #### Schema of Table
-![img123](Images/schema.png)
+![img123](Images/sch.png)
 #### Data Snippet
 ![img143](Images/data-snippet.png)
 ### Story-Board:
@@ -63,8 +63,12 @@ gs util cp *.jsonl gs://my-bucket
 * Enjoy the conversation between him, his manager and a PM! 
 * This is his first job straight out of college! 
 ```
-![img123](Images/story-board1.png)
-![img213](Images/story-board-2.png)
+
+
+<iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/RNeqoZj8GeZyZh7HVNdbg6#2Ux7TurymR4ynppBR5sX"></iframe>
+
+<iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/WVB65X6AswxoHf6NRTfL9i#2Ux7TurymMkhLwaGStnm"></iframe>
+
 <iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/9Hcr66RyuRMrQWgbwMpWcc#2Ux7TurymNDXVqGDQFL5"></iframe>
 
 <iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/7mTNcYUmovVrSTqX2GBg8q#2Ux7TurymNBUosUW4x3j"></iframe>
