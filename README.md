@@ -11,7 +11,7 @@ Billions of users use the social network, which means billions of data is availa
 * Wrote a Python script to parse tweets.
 * Around 30k-100k tweets were extracted per day.
 
-<iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/MH6Cbanx3pnopev7VZigWg#2Ux7TurymMoqmkXT1cLP"></iframe>
+
 
 #### Code Snippet: [link](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/Scripts/parse_tweet.py)
 
@@ -66,15 +66,63 @@ gs util cp *.jsonl gs://my-bucket
 ![img123](Images/story-board1.png)
 ![img213](Images/story-board-2.png)
 ![img456](Images/story-board3.png)
-![img123](Images/sb4.png)
+
+<iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/7mTNcYUmovVrSTqX2GBg8q#2Ux7TurymNBUosUW4x3j"></iframe>
+
+
 * It's important to note that the UDF Function is using an extra step called `Aggregation` and also the `Sort` step doesn't seem any faster.
 * Looks like the *Normal Query* is more efficient! 
 * Queries: 
 ##### Simple Query:
-![img651](Images/sc1.png)
+```
+SELECT
+  country_code,
+  u_followers/u_id AS avg_followers,
+  u_following/u_id AS avg_following
+FROM (
+  SELECT
+    country_code,
+    SUM(user_followers) AS u_followers,
+    SUM(user_following) AS u_following,
+    COUNT(user_id) AS u_id
+  FROM
+    unique_table
+  WHERE
+    country_code != ""
+  GROUP BY
+    country_code)
+```
 ##### JS UDF Query: 
-![img652](Images/sc2.png)
-![img612](Images/sb5.png)
+```
+CREATE TEMP FUNCTION
+  solve(param ARRAY<STRUCT<user_followers INT64,
+    user_following INT64>>)
+  RETURNS STRUCT<avg_follower INT64,
+  avg_following INT64>
+  LANGUAGE js AS """
+  var len = param.length;
+  var following_ct = 0;
+  var follower_ct = 0;
+  var ct = 0;
+  for(var i = 0; i < len; ++i) {
+    var t1 = parseInt(param[i].user_followers)
+    var t2 = parseInt(param[i].user_following);
+    follower_ct = follower_ct + t1
+    following_ct = following_ct + t2;
+  }
+  return {avg_follower : follower_ct/len, avg_following : following_ct/len}
+""";
+SELECT
+  country_code,
+  solve(user)
+FROM
+  follower_table
+ORDER BY
+  country_code DESC
+```
+
+<iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/MH6Cbanx3pnopev7VZigWg#2Ux7TurymMoenUcvxoz7"></iframe>
+
 * Sid is supposed to show this result during his presentation when he realizes that his results are *inconclusive*. How can Barack Obama lose so many followers between 2007 to 2008! Hmm, so it means we have less data for a couple of years! What does Sid do? He tries to address these things in his future work.
 
 
