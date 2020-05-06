@@ -3,15 +3,14 @@
 Billions of users use the social network, which means billions of data is available on the internet. Twitter being one of the social network giants is one of the famous platforms for people to rant, provide insights on unnecessary topics, bash each other, talk about politics, and many more. Primary motivation for choosing the twitter dataset is to analyse the dynamics and structure of the modern society. Almost every active twitter user’s thinking about a certain topic can be altered via fake news. My analysis of the dataset is to find patterns within countries and users.
 
 ![img09](Images/hld.png)
+
 ### About the data
-* The tweets were extracted via [Twitter API](https://developer.twitter.com/en/docs) and [Tweepy](https://www.tweepy.org/)
-* Data Format : JSONL.
+The data was gathered by writing a Python script which uses [Twitter API](https://developer.twitter.com/en/docs) and [Tweepy](https://www.tweepy.org/) to extract individual tweets. Twitter requires one to create a Twitter Developer account after which you can receive the authorization key and password to extract data. The tweets are of *JSON* format. A sample of the json file can be found [here](https://pastebin.com/SrVfQ7n4). 
 
 ### Obtaining the data
 * Wrote a Python script to parse tweets.
+* The individual tweets were stored locally in a directory before uploading it to Google Cloud Storage.
 * Around 30k-100k tweets were extracted per day.
-
-
 
 #### Code Snippet: [link](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/Scripts/parse_tweet.py)
 
@@ -42,8 +41,25 @@ class​ ​StdOutListener​(StreamListener)​:
 * Each Json was stored as a class and written into a file as JSONL format.
 
 #### Code Snippet: [link](https://github.com/siddhartha97/Twitter-Data-Analysis/blob/master/Pipeline/java/dataflow/src/main/java/edu/usfca/dataflow/Main.java)
+```
+ static public void processJson(String filename) {
+   Gson gson = new GsonBuilder().setLenient().create();
+   JsonObject object = (JsonObject) new JsonParser().parse(new FileReader(filename));
+   String user_id = "", user_name = "";
+   String user_screen_name = "", user_location = "", user_url = "";
+   if(object.has("retweeted_status")) {
+       JsonObject re_status = object.get("retweeted_status").getAsJsonObject();
+      if(re_status.has("user")) {
+        JsonObject user_json = re_status.get("user").getAsJsonObject();
+        if(user_json.has("id_str"))
+          user_id = user_json.get("id_str").getAsString();
+        if(user_json.has("name"))
+          user_name = user_json.get("name").getAsString();
+        ....
+     }
+ }
+```
 
-![test_img](Images/preprocess.png)
 ### Google Big-Query: 
 * Current File Format: JSONL.
 * Since the size of the file was > 10MB, we cannot directly upload the JSONL File.
