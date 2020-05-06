@@ -5,7 +5,7 @@ Billions of users use the social network, which means billions of data is availa
 ![img09](Images/hld.png)
 
 ### About the data
-The data was gathered by writing a Python script which uses [Twitter API](https://developer.twitter.com/en/docs) and [Tweepy](https://www.tweepy.org/) to extract individual tweets. Twitter requires one to create a Twitter Developer account after which you can receive the authorization key and password to extract data. The tweets are of *JSON* format. A sample of the json file can be found [here](https://pastebin.com/SrVfQ7n4). 
+The data was gathered by writing a Python script which uses [Twitter API](https://developer.twitter.com/en/docs) and [Tweepy](https://www.tweepy.org/) to extract individual tweets. Twitter requires one to create a Twitter developer account after which you'll receive authorization keys to extract data. The tweets are of *JSON* format. A sample of the json file can be found [here](https://pastebin.com/SrVfQ7n4). 
 
 ### Obtaining the data
 * Wrote a Python script to parse tweets.
